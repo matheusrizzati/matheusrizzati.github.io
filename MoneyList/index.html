@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoneyList - Controle as transações do seu negócio</title>
     <link rel="stylesheet" href="styles.css">
@@ -15,10 +16,34 @@
 
 </head>
 <body>
+    <!-- MODAL -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-title">
+                <h2 id="title-text">ADICIONAR ENTRADA</h2>
+                <span id="title-cancel">X</span>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form">
+                    <label>Insira o valor</label>
+                    <script>
+                        // $(function() {
+                        // $('#value').maskMoney();
+                        // })
+                    </script>
+                    <input type="text" id="value" placeholder="R$ 0.00" maxlength="16" autocomplete="off"> 
+                </form>
+                <div class="modal-buttons">
+                    <input type="button" id="modal-cancel" value="cancelar">
+                    <input type="button" id="modal-confirm" value="confirmar">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- SAUDAÇÕES E PERIODO  -->
     <header>
         <span id="greetings">Bem vindo, Matheus</span>
-        <span>Exibir <span id="period">este mês ></span></span>
+        <span>Exibir <span id="period">sempre</span></span>
     </header>
     <!-- CONTAINER PRINCIPAL -->
     <div class="main-container" >
@@ -26,30 +51,31 @@
             <h1>TOTAL LUCRADO</h1>
             <div class="profit-div">
                 <span class="money-icon">R$</span>
-                <span id="profit-value">83,425.57</span>
+                <span id="profit-value">0.00</span>
             </div>
-            <div id="profit-data">10% a mais do que no ultimo mês</div>
+            <div id="profit-data">Adicione sua primeira transação</div>
         </div>
         <div class="detail-div">
             <div class="entry">
                 <h2>Entradas</h2>
                 <div class="entry-div">
-                    <span class="entry-out-icon">R$</span><span id="entry-value">12,340.37</span>
+                    <span class="entry-out-icon">R$</span><span id="entry-value">0.00</span>
                 </div>
             </div>
             <div class="out">
                 <h2>Saidas</h2>
                 <div class="out-div">
-                    <span class="entry-out-icon">R$</span><span id="out-value">7,425.65</span>
+                    <span class="entry-out-icon">R$</span><span id="out-value">0.00</span>
                 </div>
             </div>
         </div>
     </div>
+    <!-- BOTÕES -->
     <div class="buttons">
         <input type="button" id="entryBtn" value="adicionar entrada">
         <input type="button" id="outBtn" value="subtrair saída">
     </div>
-
+    <!-- CONTAINER DE HISTORICO DE TRANSAÇÕES -->
     <div class="history-container">
         <div class="history-title-div">
             <h1>HISTORICO DE TRANSAÇÕES</h1>    
@@ -65,106 +91,77 @@
             <div class="history-reg">
                 <span class="reg-icon-out"></span>
                 <div class="history-reg-money">
-                    <span class="history-money-icon">R$</span><span id="history-money-value">123.45</span>
-                </div>
-            </div>
-            
-            <div class="history-reg">
-                <span class="reg-icon-entry"></span>
-                <div class="history-reg-money">
-                    <span class="history-money-icon">R$</span><span id="history-money-value">290.32</span>
-                </div>
-            </div>
-            
-            <div class="history-reg">
-                <span class="reg-icon-entry"></span>
-                <div class="history-reg-money">
-                    <span class="history-money-icon">R$</span><span id="history-money-value">290.32</span>
-                </div>
-            </div>
-            
-            <div class="history-reg">
-                <span class="reg-icon-entry"></span>
-                <div class="history-reg-money">
-                    <span class="history-money-icon">R$</span><span id="history-money-value">290.32</span>
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
                 </div>
             </div>
 
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
+
+            <div class="history-reg">
+                <span class="reg-icon-out"></span>
+                <div class="history-reg-money">
+                    <span class="history-money-icon">R$</span><span class="history-money-value">123.45</span>
+                </div>
+            </div>
         </div>
 
     </div>
-    
-    <div class="modal">
-        <div class="modal-content">
-            <div class="modal-title">
-                <h2 id="title-text">ADICIONAR ENTRADA</h2>
-                <span id="title-cancel">X</span>
-            </div>
-            <div class="modal-body">
-                <form class="modal-form">
-                    <label>Insira o valor</label>
-                    <script>
-                        $(function() {
-                        $('#value').maskMoney();
-                        })
-                    </script>
-                    <input type="text" id="value" placeholder="R$ 0.00" maxlength="16" autocomplete="off" data-prefix="R$ "> 
-                </form>
-                <div class="modal-buttons">
-                    <input type="button" id="modal-cancel" value="cancelar">
-                    <input type="button" id="modal-confirm" value="confirmar">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script>
-        //Botão de adicionar entrada
-        const entryButton = document.querySelector('#entryBtn')
-        //Botão de subtrair saida
-        const outButton = document.querySelector('#outBtn')
-        // X
-        const titleCancel = document.querySelector('#title-cancel')
-        // Botão cancelar no modal
-        const cancelButton = document.querySelector('#modal-cancel')
-        //Elemento Modal
-        const modal = document.querySelector('.modal')
-
-        //Abre o modal
-        const openModalEntry = function() {
-            document.getElementById('title-text').innerHTML = 'ADICIONAR ENTRADA'
-            modal.style.display = 'block'
-        }
-
-        const openModalOut = function() {
-            document.getElementById('title-text').innerHTML = 'SUBTRAIR SAÍDA'
-            modal.style.display = 'block'
-        }
-
-        //Fecha o modal
-        const closeModal = (e) => {
-            e.preventDefault()
-            modal.style.display = 'none'
-        }
-
-        entryButton.addEventListener("click", openModalEntry)
-        outButton.addEventListener("click", openModalOut)
-
-        cancelButton.addEventListener("click", closeModal)
-        titleCancel.addEventListener("click", closeModal)
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
-        }}
-
-        window.addEventListener("keydown", function(e){
-            if (e.keyCode == '27') {
-                closeModal(e)
-            }
-        })
-
-    </script>
+        <script src="scripts.js"></script>
 
 </body>
 </html>

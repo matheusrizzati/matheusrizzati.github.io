@@ -47,6 +47,7 @@ header span{
     padding: 30px 3vw;
     justify-content: space-between;
     align-items: flex-start;
+    align-items: center;
     border-radius: 20px;
 }
 
@@ -94,6 +95,7 @@ header span{
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .detail-div{
@@ -173,7 +175,9 @@ header span{
 
 .history-container{
     display: flex;
+    height: 30vh;
     flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: column;
     width: 80vw;
     background-color: #FFF;
@@ -204,7 +208,7 @@ header span{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto;   
+    overflow-y: scroll;   
 }
 
 .history-reg{
@@ -239,7 +243,7 @@ header span{
     color: #8d8d8d;
 }
 
-#history-money-value{
+.history-money-value{
     font-size: 1.4rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -304,7 +308,7 @@ header span{
 .modal-body{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;   
     height: 100%;
 }
 
