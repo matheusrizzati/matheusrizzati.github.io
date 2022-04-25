@@ -163,5 +163,3 @@ modal.addEventListener("keydown", function(e){
 })
 
 // addTransaction(1502.32)
-
-

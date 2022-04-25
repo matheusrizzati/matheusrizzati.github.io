@@ -10,6 +10,9 @@
    -ms-user-select: none;
    user-select: none;
 }
+html{
+    font-size: 100%;
+}
 
 body {
     display: flex;
@@ -49,10 +52,6 @@ header span{
     align-items: flex-start;
     align-items: center;
     border-radius: 20px;
-}
-
-.resume-div{
-    margin-right: 4vw;
 }
 
 .resume-div h1{
@@ -208,7 +207,7 @@ header span{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: scroll;   
+    overflow-y: auto;   
 }
 
 .history-reg{
@@ -380,4 +379,60 @@ header span{
 
 .modal-buttons input:active{
     background-color: #ECE9E9;
+}
+
+@media (max-width: 680px){
+    .main-container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .resume-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    .resume-div h1{
+        margin: 0px;
+    }
+    .profit-div{
+        margin: 0px;
+    }
+
+    .entry, .out{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .buttons{
+        flex-direction: column;
+        margin-bottom: 13px;
+    }
+    .buttons input{
+        width: 100%;
+        margin-bottom: 7px;
+    }
+
+    .history-title-div{
+        justify-content: center;
+    }
+    .history-title-div h1{
+        margin: 0px;
+    }
+}
+
+@media (max-width: 550px){
+    html{
+        font-size: 90%;
+    }
+
+    .history-title-div h1{
+        font-size: 1.3rem;
+    }
+
+    header span{
+        font-size: 1.3rem;
+    }
 }
